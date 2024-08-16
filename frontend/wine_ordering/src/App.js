@@ -5,7 +5,7 @@ import RegisterRestaurant from "./pages/RegisterRestaurant";
 import LoginRestaurant from "./pages/LoginRestaurant";
 import Admin from "./pages/Admin";
 import Inventory from "./pages/Inventory";
-
+import AddProduct from "./pages/AddProduct";
 
 
 function App() {
@@ -17,6 +17,7 @@ function App() {
         <Route path='/loginrestaurant' element={<LoginRestaurant />} />
         <Route path='/admin' element={<Admin />} />
         <Route path='/inventory' element={<Inventory />} />
+        <Route path='/addproduct' element={<AddProduct />} />
        
 
       </Routes>

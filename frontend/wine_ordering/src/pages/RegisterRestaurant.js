@@ -19,7 +19,7 @@ function RegisterRestaurant() {
     const [shopemail, setShopemail] = useState('');
     const [ownername, setOwnername] = useState('');
     const [ownercontact, setOwnercontact] = useState('');
-    const [ownermail, setOwneremail] = useState('');
+    const [owneremail, setOwneremail] = useState('');
     const [error, setError] = useState(null);
 
     const navigate = useNavigate()
@@ -79,7 +79,7 @@ function RegisterRestaurant() {
             shopemail,
             ownername,
             ownercontact,
-            ownermail,
+            owneremail,
             openingTimes,
         }
         console.log(formData)
@@ -157,7 +157,7 @@ function RegisterRestaurant() {
                     </Form.Group>
                     <Form.Group className="mb-3" controlId="owneremail">
                         <Form.Label>Owner Email</Form.Label>
-                        <Form.Control className='formcontrol' value={ownermail} onChange={(e) => setOwneremail(e.target.value)} type="email" placeholder="Enter Owner Email" required />
+                        <Form.Control className='formcontrol' value={owneremail} onChange={(e) => setOwneremail(e.target.value)} type="email" placeholder="Enter Owner Email" required />
                     </Form.Group>
 
                     <h5>Open Hours</h5>

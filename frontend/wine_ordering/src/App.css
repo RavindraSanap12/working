@@ -105,7 +105,8 @@
   background-color: white;
 }
 
-.registerform {
+.registerform,
+.addproductform {
 
   padding: 10%;
 }
@@ -124,7 +125,8 @@
   width: 100%;
 }
 
-.registerheading {
+.registerheading,
+.addproductheading {
   text-align: center;
 }
 
@@ -132,7 +134,8 @@
   text-align: center;
 }
 
-.registerbutton {
+.registerbutton,
+.addproductbutton {
   justify-content: center;
   align-items: center;
 }
@@ -163,7 +166,8 @@
   background-color: #282c34;
 }
 
-.registerbody {
+.registerbody,
+.addproductbody {
   height: fit-content;
   background-color: #282c34;
 }
@@ -183,12 +187,12 @@
 
 .profile {
   display: flex;
-  align-items: center; 
-  justify-content: center; 
+  align-items: center;
+  justify-content: center;
   width: 70px;
   position: absolute;
-  top: 10px; 
-  right: 10px; 
+  top: 10px;
+  right: 10px;
   border: 1px solid black;
   border-radius: 50%;
   cursor: pointer;
@@ -196,14 +200,15 @@
 
 .popup {
   position: absolute;
-  top: 10px; 
-  right: 80px; 
+  top: 10px;
+  right: 80px;
   background-color: white;
   border: 1px solid #ddd;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  z-index: 1000; 
+  z-index: 1000;
 }
+
 .popup-content {
   list-style: none;
   padding: 0px;
@@ -240,12 +245,12 @@
 
 table {
   width: 100%;
-  border-collapse: collapse; 
+  border-collapse: collapse;
 }
 
 td {
   padding: 10px;
-  vertical-align: top; 
+  vertical-align: top;
 }
 
 .headersectioncounts {
@@ -274,4 +279,23 @@ td {
 
 .productimg {
   width: 70px;
+}
+
+
+.addproduct {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: absolute;
+  top: 20px;
+  right: 120px;
+  padding-top: 7px;
+}
+
+.addproductbtn {
+  font-size: small;
+  display: flex;
+  font-weight: bold;
+  border: 1px solid purple;
+  
 }
