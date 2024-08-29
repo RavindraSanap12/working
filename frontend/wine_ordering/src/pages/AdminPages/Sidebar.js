@@ -19,7 +19,7 @@ const Sidebar = () => {
           <CDBSidebarMenu>
             <Link to='/addproduct'><CDBSidebarMenuItem icon="plus">Add Product</CDBSidebarMenuItem></Link>
             <CDBSidebarMenuItem icon="th-large">Dashboard</CDBSidebarMenuItem>
-            <CDBSidebarMenuItem icon="shopping-cart">Orders</CDBSidebarMenuItem>
+            <Link to='/orders'><CDBSidebarMenuItem icon="shopping-cart">Orders</CDBSidebarMenuItem></Link>
             <Link to='/inventory'><CDBSidebarMenuItem icon="box">Inventory</CDBSidebarMenuItem></Link>
             <CDBSidebarMenuItem icon="shipping-fast">Track Orders</CDBSidebarMenuItem>
 

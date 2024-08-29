@@ -43,6 +43,8 @@
   background-image: url('./images/wine.jpg');
   height: 100vh;
   background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -70,7 +72,8 @@
   color: white;
   margin-top: 10%;
   font-size: large;
-
+  margin-left: 80px;
+  margin-right: 80px;
 
 }
 
@@ -161,16 +164,26 @@
   font-size: small;
 }
 
-.loginbody {
-  height: fit-content;
-  background-color: #282c34;
+.forgotpassword {
+  text-align: center;
+  font-size: small;
 }
 
-.registerbody,
-.addproductbody {
-  height: fit-content;
-  background-color: #282c34;
+.loginbody {
+  background-color: rgb(226, 214, 214);
+
 }
+
+.addproductbody {
+  background-color: rgb(226, 214, 214);
+
+}
+
+.registerbody {
+  background-color: rgb(226, 214, 214);
+
+}
+
 
 .adminpanel {
 
@@ -237,9 +250,9 @@
   background-color: #f0f0f0;
 }
 
-.inventory {
+.inventorybody {
   height: 100vh;
-  background-size: cover;
+
 }
 
 
@@ -261,7 +274,7 @@ td {
 .headersectionsearch {
   align-items: center;
   position: absolute;
-
+  margin-right: 12px;
 
 }
 
@@ -297,5 +310,146 @@ td {
   display: flex;
   font-weight: bold;
   border: 1px solid purple;
-  
+
+}
+
+.ordersbody {
+  max-width: 100%;
+  height: 100vh;
+  overflow-x: auto; /* Allows horizontal scrolling if the table overflows */
+}
+
+.order-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 10px 0;
+  min-width: 600px; /* Ensure table doesn't shrink too much */
+}
+
+.order-table th,
+.order-table td {
+  border: 1px solid #ccc;
+  padding: 10px;
+  text-align: center;
+  white-space: nowrap; /* Prevent text wrapping */
+}
+
+.order-table th {
+  background-color: #f2f2f2;
+}
+
+.item-select {
+  width: 100%;
+  padding: 8px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+}
+
+.invoice-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+  border-radius: 5px;
+  display: block;
+  margin: 0 auto;
+}
+
+.invoice-button:hover {
+  background-color: #0056b3;
+}
+
+.popup {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  padding: 20px;
+  width: 90%; /* Adjust for smaller screens */
+  max-width: 400px; /* Limit width on larger screens */
+}
+
+.popup-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.popup-content h3 {
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.popup-content button {
+  margin: 5px;
+  padding: 10px 20px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  background-color: #007bff;
+  color: white;
+  width: 100%; /* Full width on small screens */
+}
+
+.popup-content button:hover {
+  background-color: #0056b3;
+}
+
+.close-popup {
+  background-color: #dc3545;
+  margin-top: 10px;
+}
+
+.close-popup:hover {
+  background-color: #c82333;
+}
+
+@media (max-width: 768px) {
+  .order-table {
+    min-width: 100%; /* Allow table to fit small screens */
+    font-size: 12px; /* Further reduce text size for better fit */
+  }
+
+  .order-table th, .order-table td {
+    padding: 8px;
+  }
+
+  .item-select {
+    padding: 6px;
+  }
+
+  .invoice-button {
+    padding: 6px 10px;
+    font-size: 14px;
+  }
+
+  .popup-content h3 {
+    font-size: 16px; /* Adjust popup title size */
+  }
+}
+
+@media (max-width: 480px) {
+  .order-table {
+    font-size: 10px; /* Reduce text size even more */
+    min-width: 100%;
+  }
+
+  .order-table th, .order-table td {
+    padding: 5px;
+  }
+
+  .popup-content button {
+    padding: 8px 15px;
+    font-size: 12px;
+  }
+
+  .popup-content h3 {
+    font-size: 14px; /* Further reduce popup title size */
+  }
 }

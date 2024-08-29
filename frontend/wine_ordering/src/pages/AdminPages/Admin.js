@@ -1,8 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
-import Sidebar from '../pages/Sidebar';
-import Footer from '../components/Layout/Footer';
-import Navbars from '../components/Layout/Navbars';
-import profileImg from '../images/profile.jpg';
+import Sidebar from './Sidebar';
+import Footer from '../../components/Layout/Footer';
+import Navbars from '../../components/Layout/Navbars';
+import profileImg from '../../images/profile.jpg';
 import Button from 'react-bootstrap/Button';
 import { useNavigate } from 'react-router-dom';
 
@@ -41,7 +41,7 @@ function Admin() {
                 <Sidebar />
                 <div className='addproduct'>
                     <Button className='addproductbtn' onClick={handleaddproductClick} variant="warning">
-                    Add Product
+                        Add Product
                     </Button>
 
                 </div>

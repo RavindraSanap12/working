@@ -1,21 +1,21 @@
 import React from 'react'
-import Navbars from '../components/Layout/Navbars'
-import '../App.css';
+import Navbars from '../../components/Layout/Navbars'
+import '../../App.css';
 import Button from 'react-bootstrap/Button'
-import Footer from '../components/Layout/Footer';
+import Footer from '../../components/Layout/Footer';
 import { useNavigate } from 'react-router-dom';
 
 function Restaurant() {
     const navigate = useNavigate()
     const handleregisterClick = () => {
         navigate('/registerrestaurant');
-      };
-      const handleloginClick = () => {
+    };
+    const handleloginClick = () => {
         navigate('/loginrestaurant');
-      };
+    };
     return (
-        <>
-            <Navbars title="Restaurant Home Page"/>
+        <div className='body'>
+            <Navbars title="Restaurant Home Page" />
 
 
             <div className='register_restaurant'>
@@ -30,7 +30,7 @@ function Restaurant() {
 
             <Footer />
 
-        </>
+        </div>
     )
 }
 

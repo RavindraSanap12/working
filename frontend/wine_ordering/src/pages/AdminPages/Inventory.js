@@ -1,21 +1,34 @@
 import React from 'react'
-import Navbars from '../components/Layout/Navbars';
-import Footer from '../components/Layout/Footer';
-
+import LoginLogoutNavbar from '../../components/Layout/RestaurantLogoutNavbar';
+import Footer from '../../components/Layout/Footer';
 import Form from 'react-bootstrap/Form';
 import Button from 'react-bootstrap/Button';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import Table from 'react-bootstrap/Table';
+import img from '../../images/wine.jpg'
+import { useNavigate } from 'react-router-dom';
 
 
-import img from '../images/wine.jpg'
 function Inventory() {
+
+    const navigate = useNavigate()
+
+    function handlesearchbutton() {
+        //for search api
+    }
+    function handleeditbutton() {
+        navigate('/editproduct')
+    }
+    function handledeletebutton() {
+        //for delete api
+    }
+
     return (
         <>
 
-            <Navbars title="Inventory Management" />
-            <div className='inventory'>
+            <LoginLogoutNavbar title="Inventory Management" />
+            <div className='inventorybody'>
 
                 <div>
                     <form>
@@ -39,7 +52,7 @@ function Inventory() {
                                                         />
                                                     </Col>
                                                     <Col xs="auto">
-                                                        <Button type="submit">Submit</Button>
+                                                        <Button type="submit" onClick={handlesearchbutton}>Submit</Button>
                                                     </Col>
                                                 </Row>
                                             </Form>
@@ -76,10 +89,10 @@ function Inventory() {
                                     <td>XYZ</td>
                                     <td>In Stock</td>
                                     <td>800</td>
-                                    <td><Button className='editbutton' variant="primary" type="submit">
+                                    <td><Button className='editbutton' variant="primary" onClick={handleeditbutton} type="submit">
                                         Edit
                                     </Button></td>
-                                    <td><Button className='deletebutton' variant="danger" type="submit">
+                                    <td><Button className='deletebutton' variant="danger" onClick={handledeletebutton} type="submit">
                                         Delete
                                     </Button></td>
                                 </tr>

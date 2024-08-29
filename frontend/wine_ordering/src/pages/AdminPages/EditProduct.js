@@ -1,12 +1,12 @@
 import Button from 'react-bootstrap/Button';
 import Form from 'react-bootstrap/Form';
-import Navbars from '../components/Layout/Navbars';
-import Footer from '../components/Layout/Footer';
+import LoginLogoutNavbar from '../../components/Layout/RestaurantLogoutNavbar';
+import Footer from '../../components/Layout/Footer';
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 
 
-function AddProduct() {
+function EditProduct() {
     const [name, setName] = useState('');
     const [price, setPrice] = useState('');
     const [description, setDescription] = useState('');
@@ -23,29 +23,12 @@ function AddProduct() {
     };
 
     const handleBackClick = () => {
-        navigate('/admin');
+        navigate('/inventory');
     };
 
     const handleSubmit = (event) => {
         event.preventDefault();
 
-
-
-        //after register 
-        setName('');
-        setPrice('');
-        setDescription('');
-        setCategory('');
-        setStock('');
-        setImage(null);
-
-
-        document.getElementById('fileInput').value = '';
-
-
-
-
-        // Collect form data
         const formData = {
             name,
             price,
@@ -55,15 +38,19 @@ function AddProduct() {
             image
         }
         console.log(formData)
+
+        navigate('/inventory')
+
+
     }
 
     return (
         <>
-            <Navbars title="Add Product" />
+            <LoginLogoutNavbar title="Edit Product" />
             <div className='addproductbody'>
                 <div className='addproductform'>
                     <Form className='form' onSubmit={handleSubmit}>
-                        <h5 className='addproductheading'>Add New Product</h5>
+                        <h5 className='addproductheading'>Update Product</h5>
                         <Form.Group className="mb-3" controlId="name">
                             <Form.Label>Product Name</Form.Label>
                             <Form.Control className='formcontrol' value={name} onChange={(e) => setName(e.target.value)} type="text" placeholder="Enter Product Name" required />
@@ -93,7 +80,7 @@ function AddProduct() {
                             Back
                         </Button>
                             <Button className='addproductbutton' style={{ marginLeft: '10px' }} variant="primary" type="submit">
-                                Add
+                                Update
                             </Button></center>
                     </Form>
                 </div>
@@ -103,4 +90,4 @@ function AddProduct() {
     );
 }
 
-export default AddProduct;
+export default EditProduct;
